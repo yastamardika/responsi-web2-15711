@@ -16,7 +16,7 @@ class EmployeesController extends Controller
     public function index()
     {
         $da = Employees::all();
-        return view('')->with('', $ta);
+        return view('employees.index')->with('employees', $da);
     }
 
     /**
@@ -27,7 +27,7 @@ class EmployeesController extends Controller
     public function create()
     {
         $da = Jobs::all();
-        return view('')->with('', $ta);
+        return view('employees.create')->with('employees', $da);
     }
 
     /**
@@ -53,7 +53,7 @@ class EmployeesController extends Controller
             'address' => $request->input('alamat')
         ]);
         $employees->save();
-        return redirect('employe');
+        return redirect('/employees');
     }
 
     /**

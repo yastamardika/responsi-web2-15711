@@ -12,11 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('base');
 });
 
-// Route::('/jobs', 'JobsController');
-// Route::('/employees', 'EmployeesController');
+Route::get('/jobs', 'JobsController@index');
+Route::get('/employees', 'EmployeesController@index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

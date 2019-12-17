@@ -19,12 +19,15 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item @yield('jobs')">
-                        <a class="nav-link" href="">Jobs</a>
+
+                        <a class="nav-link" href="/jobs">Jobs</a>
                     </li>
-                    <li class="nav-item @yield('employees')">
-                        <a class="nav-link" href="">Employees</a>
+                    <li class="nav-item ">
+                        @yield('employees')
+                        <a class="nav-link" href="/employees">Employees</a>
                     </li>
-                    <li class="nav-item @yield('info')">
+                    <li class="nav-item ">
+                        @yield('info')
                         <!-- isikan link INFO anda disini -->
                         <a class="nav-link" href="">Info</a>
                     </li>
@@ -39,7 +42,7 @@
         </nav>
         <br/>
         <div class="container-fluid">
-            @yield()
+           @yield('content')
         </div>
     </body>
 </html>

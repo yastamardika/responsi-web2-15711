@@ -1,6 +1,6 @@
-@extends('')
+@extends('base')
 @section('jobs','active')
-@section('')
+@section('content')
 <a href="{{route('')}}" class="btn btn-primary">Tambah Data</a>
 <br/><br/>
 <table class="table table-bordered table-hover">
@@ -12,7 +12,7 @@
         </tr>
     </thead>
     <tbody>
-        @foreach($ as $data)
+        @foreach($jobs as $data)
         <tr>
             <th scope="row">{{$data->id_jobs}}</th>
             <td>{{$data->name}}</td>
