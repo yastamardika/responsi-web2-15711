@@ -14,7 +14,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // // factory(User::class)->create();
-        // $jobs = factory(Jobs::class, 10)->create(); // insert 10 rows
-        $employees = factory(Employees::class, 148)->create(); // insert 150 rows
+         $jobs = factory(Jobs::class, 10)->create(); // insert 10 rows
+        $employees = factory(Employees::class, 150)->create(); // insert 150 rows
     }
 }

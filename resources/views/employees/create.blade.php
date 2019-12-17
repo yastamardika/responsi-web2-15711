@@ -5,9 +5,9 @@
   @csrf
   <div class="form-group">
     <label>Jobs</label>
-    <select name="job" class="form-control">
+    <select class="form-control"  name="job">
       @foreach($employees as $data)
-        <option value="{{$data->id_jobs}}">{{$data->name}}</option>
+        <option  value="{{$data->id_jobs}}">{{$data->name}}</option>
       @endforeach
     </select>
   </div>

@@ -104,7 +104,7 @@ class EmployeesController extends Controller
             'address' => $request->input('alamat')
         ];
         Employees::where('id_employees',$id)->update($data);
-        return redirect('employ');
+        return redirect('/employees');
     }
 
     /**
@@ -116,6 +116,6 @@ class EmployeesController extends Controller
     public function destroy($id)
     {
         Employees::where('id_employees',$id)->delete();
-        return redirect('/');
+        return redirect('/employees');
     }
 }

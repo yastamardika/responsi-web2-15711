@@ -1,9 +1,9 @@
 @extends('base')
 @section('employees','active')
 @section('content')
-<form action="{{route('storejobs',$employees->id_employees)}}" method="POST">
+<form action="{{route('updateemployees',$employees->id_employees)}}">
   @csrf
-  @method('PUT')
+  @method('POST')
   <div class="form-group">
     <label>Jobs</label>
     <select name="job" class="form-control">
