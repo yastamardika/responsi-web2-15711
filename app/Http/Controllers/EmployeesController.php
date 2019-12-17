@@ -76,8 +76,8 @@ class EmployeesController extends Controller
     public function edit($id)
     {
         $jobs = Jobs::all();
-        $data = Employees::where('id_employees', '=', $id)->firstOrFail();
-        return view('')->with('employees', $data)->with('jobs', $jobs);
+        $data = Employees::where('id_employees', $id)->firstOrFail();
+        return view('employees.edit')->with('employees', $data)->with('jobs', $jobs);
     }
 
     /**
