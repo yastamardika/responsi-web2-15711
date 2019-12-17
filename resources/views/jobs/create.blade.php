@@ -1,7 +1,7 @@
 @extends('base')
 @section('jobs','active')
 @section('content')
-<form action="{{ route('storejobs')}}" method="POST">
+<form action="{{ route('storejobs')}}" method="post" enctype="multipart/form-data">
   @csrf
   <div class="form-group">
     <label>Nama Jobs</label>

@@ -116,6 +116,6 @@ class EmployeesController extends Controller
     public function destroy($id)
     {
         Employees::where('id_employees',$id)->delete();
-        return redirect('employe');
+        return redirect('/');
     }
 }

@@ -40,7 +40,7 @@ class JobsController extends Controller
             'nama'=>'required',
         ]);
         $jobs = new Jobs([
-            'nama' => $request->input('nama')
+            'name' => $request->input('nama')
         ]);
         $jobs->save();
         return redirect('jobs');
@@ -85,7 +85,7 @@ class JobsController extends Controller
             'nama' => $request->nama,
         ];
         Jobs::where('id_jobs',$id)->update($data);
-        return redirect('jobs');
+        return redirect('/jobs');
     }
 
     /**
@@ -97,6 +97,6 @@ class JobsController extends Controller
     public function destroy($id)
     {
         Jobs::where('id_jobs',$id)->delete();
-        return redirect('job');
+        return redirect('/jobs');
     }
 }

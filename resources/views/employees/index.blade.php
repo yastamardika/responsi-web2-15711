@@ -27,7 +27,7 @@
             <td>
             <div class="btn-group">
                     <a href="{{route('editemployees',$data->id_employees)}}" class="btn btn-success">Edit</a>
-                    <form action="{{ route('deleteemployees', $data->id_employees)}}" method="post">
+                    <form action="{{ route('deleteemployees', $data->id_employees)}}">
                         @csrf
                         @method('DELETE')
                         <button class="btn btn-danger" type="submit">Hapus</button>
