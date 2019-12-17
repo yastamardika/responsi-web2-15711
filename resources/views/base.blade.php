@@ -22,8 +22,8 @@
 
                         <a class="nav-link" href="/jobs">Jobs</a>
                     </li>
-                    <li class="nav-item ">
-                        @yield('employees')
+                    <li class="nav-item @yield('employees')">
+
                         <a class="nav-link" href="/employees">Employees</a>
                     </li>
                     <li class="nav-item ">

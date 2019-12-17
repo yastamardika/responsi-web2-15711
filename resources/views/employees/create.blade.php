@@ -1,12 +1,12 @@
-@extends('')
+@extends('base')
 @section('employees','active')
-@section('')
-<form action="{{route('employees.store')}}" method="POST">
+@section('content')
+<form action="{{route('storeemployees')}}" method="POST">
   @csrf
   <div class="form-group">
     <label>Jobs</label>
     <select name="job" class="form-control">
-      @foreach($jobs as $data)
+      @foreach($employees as $data)
         <option value="{{$data->id_jobs}}">{{$data->name}}</option>
       @endforeach
     </select>

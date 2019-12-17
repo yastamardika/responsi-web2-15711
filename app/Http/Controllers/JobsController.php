@@ -15,7 +15,7 @@ class JobsController extends Controller
     public function index()
     {
         $da = Jobs::all();
-        return view('jobs.index')->with('employees', $da);
+        return view('jobs.index')->with('jobs', $da);
     }
 
     /**
@@ -65,8 +65,8 @@ class JobsController extends Controller
      */
     public function edit($id)
     {
-        $da = Jobs::where('id_jobs', '=', $id)->firstOrFail();
-        return view('')->with('', $ta);
+        $da = Jobs::where('id_jobs',$id)->firstOrFail();
+        return view('jobs.edit')->with('jobs', $da);
     }
 
     /**
